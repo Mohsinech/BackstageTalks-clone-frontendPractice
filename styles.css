@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* You can delete this stylesheet after reviewing the site */
+.popup_info {
+    background-color: #fff;
+    width: fit-content;
+    height: auto;
+    position: fixed;
+    z-index: 10000;
+    margin: 1rem;
+    display: grid;
+    place-content: center;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1) inset,
+      0 5px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(204, 204, 204, 0.5);
+}
+  
+.gr {
+    color: var(--text-color);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    z-index: 10001;
+    line-height: 1.2rem;
+    width: 250px;
+}
+  
+.off_site,
+.ig {
+    color: #ff6519;
+    font-size: 1rem;
+    transition: 0.2s opacity;
+    font-size: 0.8rem;
+}
+  
+.off_site:hover,
+.ig:hover {
+    color: hotpink;
+}
+
+.exit_btn {
+    position: absolute;
+    right: -0.5rem;
+    top: -0.5rem;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    z-index: 10002;
+    display: grid;
+    background-color: #fff;
+    place-content: center;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1) inset;
+}
+  
+.exit_pp {
+    width: 90%;
+    height: 90%;
+}
+/* You can delete this stylesheet after reviewing the site */
+
+:root {
+    --text-color: #000000;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--body-bg);
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.4s;
+    scroll-snap-type: y mandatory;
+}
+
+/* Hide Scrollbar */
+body::-webkit-scrollbar {
+    visibility: hidden;
+}
+
+/* Main content */
+.hero {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+/* Heading */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 50%;
+    height: auto;
+}
+
+.mail span {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer .main_content {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 300px;
+}
+
+.main_content .heading {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.10rem;
+    line-height: 1.5rem;
+}
+
+.main_content .copyright{
+    color: var(--text-color);
+    font-size: .8rem;
+}
+
+.copyright a {
+    text-decoration: underline;
+    color: var(--text-color);
+}
+
+.privacy_policy .privacy > a{
+    color: var(--text-color);
+    text-decoration: underline;
+    font-size: 1.1rem;
+}
+
+/* Issue sections */
+.issues_sections {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.issues_sections h3 a {
+    color: var(--text-color);
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+/* Sections */
+.section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.transition {
+    transition: .4s ease;
+}
+
+/* Book Infos */
+.book_infos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.book_infos img {
+    width: 50%;
+    height: auto;
+}
+
+.book_infos .book_name {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.book_infos .link_to_buy {
+    color: var(--body-bg-white);
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.book_infos span {
+    color: var(--text-color);
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.book_infos .buy {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+/* Media Queries */
+@media (max-width: 820px) {
+    .mail, .footer {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo img {
+        width: 100%;
+    }
+
+    .book_infos {
+        gap: 1rem;
+    }
+
+    .book_infos img{
+        width: 95%;
+    }
+}
